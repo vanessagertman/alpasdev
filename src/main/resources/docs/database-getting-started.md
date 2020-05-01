@@ -38,7 +38,7 @@ as `mysql`. However, it could be any number of other supported database dialects
 </div>
 
 The database connection name in the config file is very important as this is what gets selected based
-on `DATABASE_CONNECTION` value in your `.env` file. As you might have guessed already, this is set to
+on `DB_CONNECTION` value in your `.env` file. As you might have guessed already, this is set to
 `mysql` by default. You can [add more than one connection](#multiple-database-connections), of course!
 
 You want to make sure that `OzoneServiceProvider::class` is added to the list of
@@ -131,7 +131,7 @@ useTransaction {
 </span>
 
 When you wrap your CRUD operations in a `useTransaction` block, you are invoking them in the context of the default
-database connection. This is the `DATABASE_CONNECTION` value from your `.env` file and whatever connection you
+database connection. This is the `DB_CONNECTION` value from your `.env` file and whatever connection you
 have created with that value when [registering the connections](#registering-database-connections).
 
 If you need to run some CRUD operations on a different connection, you can
